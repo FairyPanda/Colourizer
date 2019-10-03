@@ -6,6 +6,10 @@ import ssl
 from flask import Flask
 from flask import request
 from flask import jsonify
+# JSON:API is a specification for how a client should request that resources be fetched or modified, and how a server should
+# respond to those requests
+# The jsonify() function in flask returns a flask.Response() object that already has the appropriate content-type header 'application/json' for use with json responses.
+# Whereas, the json.dumps() method will just return an encoded string, which would require manually adding the MIME type header.
 from flask import send_file
 
 
