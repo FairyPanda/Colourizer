@@ -1,8 +1,10 @@
 From nvcr.io/nvidia/pytorch:19.04-py3
+# pytorch is used for computer vision
 
 RUN apt-get -y update
 
 RUN apt-get install -y python3-pip software-properties-common wget ffmpeg
+#  ffmpeg can convert between different file formats,
 
 RUN add-apt-repository ppa:git-core/ppa
 
@@ -15,6 +17,7 @@ RUN apt-get install -y git-lfs --allow-unauthenticated
 RUN git lfs install
 
 ENV GIT_WORK_TREE=/data
+# GIT_WORK_TREE is the location of the root of the working directory for a non-bare repository.
 
 RUN mkdir -p /root/.torch/models
 
