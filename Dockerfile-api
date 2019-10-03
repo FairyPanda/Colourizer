@@ -17,8 +17,6 @@ WORKDIR /data
 RUN pip install -r requirements.txt
 
 RUN pip install  Flask
-Flask is a web framework. This means flask provides you with tools, libraries and technologies that allow you to build
-a web application. ... In the case of Flask, its dependencies are: Werkzeug a WSGI utility library. jinja2 which is its template engine.
 
 RUN pip install Pillow
 
